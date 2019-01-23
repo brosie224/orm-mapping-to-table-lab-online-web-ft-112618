@@ -21,9 +21,7 @@ attr_reader :id
   end
 
   def self.drop_table
-    sql = <<-SQF
-      DROP TABLE students
-      SQF
+    sql = "DROP TABLE students"
     DB[:conn].execute(sql)
   end
 
